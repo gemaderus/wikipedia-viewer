@@ -1,0 +1,19 @@
+.btn {
+  background-color: transparent;
+  outline: none;
+  webkit-appearance: none;
+  border: 0;
+  display: inline-block;
+}
+
+.btn-action {
+  background-color: #DC4E00;
+  color: white;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.btn-action--search {
+  position: absolute;
+  right: 0;
+}

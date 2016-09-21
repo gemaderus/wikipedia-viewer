@@ -275,7 +275,7 @@ td,
 th {
   padding: 0; }
 
-/* 4. Base */
+/* 2. Base */
 /*
 
 Global
@@ -298,7 +298,7 @@ html {
 
 html,
 body {
-  color: #444;
+  color: #929487;
   height: 100%; }
 
 body {
@@ -327,7 +327,8 @@ h1, h2, h3, h4, h5, h6 headings styles.
 
 */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
+  margin: 0;
+  line-height: 1; }
 
 /*
 
@@ -363,4 +364,93 @@ Reset default styles on paragraphs.
 
 */
 p {
-  margin-top: 0; }
+  margin: 0; }
+
+/* 3. Helpers */
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+.align-right {
+  text-align: left; }
+
+.mb0 {
+  margin-bottom: 5px; }
+
+.mb1 {
+  margin-bottom: 1rem; }
+
+.mb2 {
+  margin-bottom: 2rem; }
+
+.mb3 {
+  margin-bottom: 3rem; }
+
+/* 4. Component */
+.Content {
+  background-color: #F4F5ED;
+  margin: auto;
+  padding: 40px; }
+
+.Form-group {
+  position: relative;
+  width: 800px;
+  margin: auto; }
+
+.Input-Search {
+  padding: 10px;
+  font-size: 16px;
+  border: 0;
+  width: calc(100% - 62px);
+  outline: none;
+  color: #929487; }
+
+.Search {
+  color: #89CEDE; }
+  .Search h1 {
+    font-size: 40px; }
+  .Search h2 {
+    font-size: 30px; }
+
+.Result-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.Result-item {
+  background-color: white;
+  margin-bottom: 30px;
+  max-width: 800px;
+  padding: 20px; }
+  .Result-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px; }
+  .Result-item p {
+    font-size: 16px;
+    margin-bottom: 15px; }
+
+.btn {
+  background-color: transparent;
+  outline: none;
+  webkit-appearance: none;
+  border: 0;
+  display: inline-block; }
+
+.btn-action {
+  background-color: #DC4E00;
+  color: white;
+  font-size: 16px;
+  padding: 8px; }
+
+.btn-action--search {
+  position: absolute;
+  right: 0; }
