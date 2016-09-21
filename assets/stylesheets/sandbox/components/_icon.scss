@@ -1,0 +1,23 @@
+.Icon {
+  display: inline-block;
+}
+
+.Icon-lens {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+  svg {
+    fill: #929487;
+  }
+}
+
+.Icon-random {
+  position: absolute;
+
+  svg {
+    fill: white;
+  }
+}

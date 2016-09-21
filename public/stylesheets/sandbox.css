@@ -302,7 +302,7 @@ body {
   height: 100%; }
 
 body {
-  background: #eee;
+  background-color: #F4F5ED;
   overflow-x: hidden; }
 
 /*
@@ -390,19 +390,20 @@ p {
 
 /* 4. Component */
 .Content {
-  background-color: #F4F5ED;
   margin: auto;
   padding: 40px; }
 
 .Form-group {
   position: relative;
   width: 800px;
-  margin: auto; }
+  margin-left: auto;
+  margin-right: auto; }
 
 .Input-Search {
-  padding: 10px;
-  font-size: 16px;
+  padding: 20px 65px;
+  font-size: 20px;
   border: 0;
+  border-radius: 6px 0  0 6px;
   width: calc(100% - 62px);
   outline: none;
   color: #929487; }
@@ -414,7 +415,7 @@ p {
   .Search h2 {
     font-size: 30px; }
 
-.Result-items {
+.Topic-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,31 +427,75 @@ p {
       -ms-flex-align: center;
           align-items: center; }
 
-.Result-item {
+.Topic-item {
   background-color: white;
   margin-bottom: 30px;
   max-width: 800px;
-  padding: 20px; }
-  .Result-item h3 {
+  padding: 40px;
+  border-radius: 10px; }
+  .Topic-item h3 {
     font-size: 20px;
-    margin-bottom: 5px; }
-  .Result-item p {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px; }
+  .Topic-item p {
     font-size: 16px;
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
+  @media screen and (min-width: 900px) {
+    .Topic-item {
+      width: 800px; } }
 
-.btn {
-  background-color: transparent;
-  outline: none;
+.Btn {
   webkit-appearance: none;
+  background-color: transparent;
+  border-radius: 6px;
   border: 0;
-  display: inline-block; }
+  display: inline-block;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 0; }
 
-.btn-action {
+.Btn-action {
   background-color: #DC4E00;
   color: white;
   font-size: 16px;
-  padding: 8px; }
+  padding: 15px; }
 
-.btn-action--search {
+.Btn-action--search {
+  border-radius: 0 6px 6px 0;
   position: absolute;
-  right: 0; }
+  right: 0;
+  padding: 25px 10px; }
+
+.Btn--random {
+  position: relative; }
+
+.Icon {
+  display: inline-block; }
+
+.Icon-lens {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none; }
+  .Icon-lens svg {
+    fill: #929487; }
+
+.Icon-random {
+  position: absolute; }
+  .Icon-random svg {
+    fill: white; }
+
+.Body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center; }

@@ -12,7 +12,7 @@
     <title>Wikipedia Viewer</title>
 
   </head>
-  <body>
+  <body class="Body">
 
     <section class="Content">
       
@@ -21,61 +21,25 @@
   <h2 class="mb3 align-center">What would you like to read?</h2>
   <form action="" class="mb3">
     <div class="Form-group mb3">
-      <input type="text" class="Input-Search">
-      <i class="icon-lens"></i>
-      <button class="btn btn-action btn-action--search">Search</button>
+      <input type="text" class="Input-Search" id="search-input">
+      <i class="Icon Icon-lens">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="28" height="28" viewBox="0 0 28 28">
+          <path d="M31.01 27.23l-7.58-6.45c-0.78-0.7-1.62-1.03-2.3-1 1.79-2.1 2.87-4.82 2.87-7.79 0-6.63-5.37-12-12-12s-12 5.37-12 12 5.37 12 12 12c2.97 0 5.69-1.08 7.79-2.87-0.03 0.68 0.29 1.52 1 2.3l6.45 7.58c1.1 1.23 2.91 1.33 4.01 0.23s1-2.9-0.23-4.01zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+        </svg>
+      </i>
+        <button class="Btn Btn-action Btn-action--search" id="button-search">Search</button>
     </div>
-     <div class="align-center">
-      <button class="btn">Random article</button>
+     <div class="Button-holder align-center">
+      <button class="Btn Btn-action Btn--random">Random article</button>
     </div>
   </form>
 </div>
-<div class="Result">
-  <ul class="Result-items">
-    <li class="Result-item">
-      <h3>Hola</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut impedit obcaecati cumque facere doloremque voluptatibus, a excepturi, rerum, inventore iusto fugiat voluptates quidem. Illum, eos, quis. Unde minima similique, sequi!</p>
-      <button class="btn btn-action">Read more</button>
-    </li>
-    <li class="Result-item">
-      <h3>Hola</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut impedit obcaecati cumque facere doloremque voluptatibus, a excepturi, rerum, inventore iusto fugiat voluptates quidem. Illum, eos, quis. Unde minima similique, sequi!</p>
-      <button class="btn btn-action">Read more</button>
-    </li>
-    <li class="Result-item">
-      <h3>Hola</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut impedit obcaecati cumque facere doloremque voluptatibus, a excepturi, rerum, inventore iusto fugiat voluptates quidem. Illum, eos, quis. Unde minima similique, sequi!</p>
-      <button class="btn btn-action">Read more</button>
-    </li>
-    <li class="Result-item">
-      <h3>Hola</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut impedit obcaecati cumque facere doloremque voluptatibus, a excepturi, rerum, inventore iusto fugiat voluptates quidem. Illum, eos, quis. Unde minima similique, sequi!</p>
-      <button class="btn btn-action">Read more</button>
-    </li>
-    <li class="Result-item">
-      <h3>Hola</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut impedit obcaecati cumque facere doloremque voluptatibus, a excepturi, rerum, inventore iusto fugiat voluptates quidem. Illum, eos, quis. Unde minima similique, sequi!</p>
-      <button class="btn btn-action">Read more</button>
-    </li>
-    <li class="Result-item">
-      <h3>Hola</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut impedit obcaecati cumque facere doloremque voluptatibus, a excepturi, rerum, inventore iusto fugiat voluptates quidem. Illum, eos, quis. Unde minima similique, sequi!</p>
-      <button class="btn btn-action">Read more</button>
-    </li>
-    <li class="Result-item">
-      <h3>Hola</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut impedit obcaecati cumque facere doloremque voluptatibus, a excepturi, rerum, inventore iusto fugiat voluptates quidem. Illum, eos, quis. Unde minima similique, sequi!</p>
-      <button class="btn btn-action">Read more</button>
-    </li>
-    <li class="Result-item">
-      <h3>Hola</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut impedit obcaecati cumque facere doloremque voluptatibus, a excepturi, rerum, inventore iusto fugiat voluptates quidem. Illum, eos, quis. Unde minima similique, sequi!</p>
-      <button class="btn btn-action">Read more</button>
-    </li>
+<div class="Topic">
+  <ul class="Topic-items" id="Topic-list">
 
   </ul>
   <div class="align-center">
-    <button class="btn btn-action">Read more</button>
+    <a href="#" class="Btn Btn-action Btn-link">Read more</a>
   </div>
 </div>
 
