@@ -298,7 +298,6 @@ html {
 
 html,
 body {
-  color: #929487;
   height: 100%; }
 
 body {
@@ -408,12 +407,11 @@ p {
   outline: none;
   color: #929487; }
 
-.Search {
-  color: #89CEDE; }
-  .Search h1 {
-    font-size: 40px; }
-  .Search h2 {
-    font-size: 30px; }
+.Search h1 {
+  font-size: 40px; }
+
+.Search h2 {
+  font-size: 30px; }
 
 .Topic-items {
   display: -webkit-box;
@@ -425,7 +423,8 @@ p {
           flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  color: #929487; }
 
 .Topic-item {
   background-color: white;
@@ -457,7 +456,7 @@ p {
   padding: 0; }
 
 .Btn-action {
-  background-color: #DC4E00;
+  background-color: #FF5FAB;
   color: white;
   font-size: 16px;
   padding: 15px; }
@@ -498,4 +497,15 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-line-pack: center;
-      align-content: center; }
+      align-content: center;
+  background-image: url(../../images/powerfull.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #78bcce; }
+
+.is-clicked.Body {
+  background-image: none;
+  background-color: #78bcce;
+  color: white;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s; }
