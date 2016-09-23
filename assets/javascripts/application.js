@@ -8,6 +8,11 @@ $(function() {
   $("#button-search").on("click", function(e) {
     e.preventDefault();
     var searchValue = $("#search-input").val();
+
+    if ($.trim(searchValue) === "") {
+      e.preventDefault();
+    }
+
     var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchValue +"&pwpcontinue&format=json&callback=?"
 
     search(url);

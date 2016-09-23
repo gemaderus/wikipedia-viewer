@@ -301,7 +301,6 @@ body {
   height: 100%; }
 
 body {
-  background-color: #F4F5ED;
   overflow-x: hidden; }
 
 /*
@@ -340,8 +339,6 @@ Links styles.
 a {
   cursor: pointer;
   text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
 
 /*
 
@@ -387,121 +384,126 @@ p {
 .mb3 {
   margin-bottom: 3rem; }
 
+.mb6 {
+  margin-bottom: 6rem; }
+
 /* 4. Component */
 .Content {
-  margin: auto;
-  padding: 40px; }
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+  padding: 20px; }
 
-.Form-group {
-  position: relative;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto; }
+.Input-group {
+  position: relative; }
 
 .Input-Search {
-  padding: 20px 65px;
+  padding: 20px 20px 20px 65px;
   font-size: 20px;
   border: 0;
   border-radius: 6px 0  0 6px;
-  width: calc(100% - 62px);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   outline: none;
   color: #929487; }
 
-.Search h1 {
-  font-size: 40px; }
-
-.Search h2 {
-  font-size: 30px; }
+.Search {
+  padding: 30px 0px;
+  max-width: 100%; }
+  .Search h1 {
+    font-size: 30px; }
+  .Search h2 {
+    font-size: 20px; }
+  @media screen and (min-width: 600px) {
+    .Search h1 {
+      font-size: 40px; }
+    .Search h2 {
+      font-size: 30px; } }
+  @media screen and (min-width: 810px) {
+    .Search {
+      width: 800px; } }
 
 .Topic-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
+              -ms-grid-row-align: center;
           align-items: center;
   color: #929487; }
+  @media screen and (min-width: 810px) {
+    .Topic-items {
+      width: 800px; } }
 
 .Topic-item {
   background-color: white;
+  border-radius: 10px;
   margin-bottom: 30px;
-  max-width: 800px;
-  padding: 40px;
-  border-radius: 10px; }
+  width: 100%;
+  padding: 30px; }
   .Topic-item h3 {
+    border-bottom: 1px solid #ddd;
     font-size: 20px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #ddd;
     padding-bottom: 30px; }
   .Topic-item p {
     font-size: 16px;
     margin-bottom: 30px; }
-  @media screen and (min-width: 900px) {
-    .Topic-item {
-      width: 800px; } }
 
 .Btn {
-  webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
-  border-radius: 6px;
   border: 0;
+  border-radius: 6px;
   display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
   line-height: 1;
   margin: 0;
   outline: none;
-  padding: 0; }
+  padding: 25px 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: 0.25s;
+  transition: 0.25s; }
 
 .Btn-action {
   background-color: #FF5FAB;
-  color: white;
-  font-size: 16px;
-  padding: 15px; }
+  color: white; }
+  .Btn-action:hover {
+    background-color: #ff2c90; }
 
-.Btn-action--search {
-  border-radius: 0 6px 6px 0;
-  position: absolute;
-  right: 0;
-  padding: 25px 10px; }
-
-.Btn--random {
-  position: relative; }
+.Button--search {
+  border-radius: 0 6px 6px 0; }
 
 .Icon {
   display: inline-block; }
 
 .Icon-lens {
   position: absolute;
+  fill: #929487;
   left: 20px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   pointer-events: none; }
-  .Icon-lens svg {
-    fill: #929487; }
-
-.Icon-random {
-  position: absolute; }
-  .Icon-random svg {
-    fill: white; }
 
 .Body {
+  background-image: url(../../images/powerfull.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #78bcce;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  background-image: url(../../images/powerfull.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #78bcce; }
+          flex-direction: column; }
 
 .is-clicked.Body {
   background-image: none;
@@ -509,3 +511,17 @@ p {
   color: white;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s; }
+
+.is-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.Footer {
+  font-size: 16px;
+  padding: 20px;
+  text-align: center; }
+  .Footer a {
+    color: #FF5FAB; }
+    .Footer a:hover {
+      text-decoration: underline; }
