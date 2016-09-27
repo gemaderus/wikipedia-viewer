@@ -54,14 +54,13 @@
 	  $("#button-search").on("click", function(e) {
 	    e.preventDefault();
 	    var searchValue = $("#search-input").val();
+	    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchValue +"&pwpcontinue&format=json&callback=?"
 
 	    if ($.trim(searchValue) === "") {
 	      e.preventDefault();
+	    } else {
+	      search(url);
 	    }
-
-	    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchValue +"&pwpcontinue&format=json&callback=?"
-
-	    search(url);
 	  });
 	});
 
@@ -71,7 +70,7 @@
 	  $.getJSON(url, handleResponse);
 	}
 
-	//To handle the api
+	//Handler api
 
 	function handleResponse(response) {
 	  var topicsList = response[1];
@@ -110,51 +109,6 @@
 	function background() {
 	  $(".Body").addClass("is-clicked");
 	}
-
-	//To get the random content
-
-	// $(function() {
-	//   $("#btn-random").on("click", function(e) {
-	//     e.preventDefault();
-	//     // var url = "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&list=random&rnlimit=10&format=json&callback=?"
-
-	//     var url ="https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&generator=random&grnnamespace=0&rnlimit=10&callback=?"
-	//     random(url);
-	//   });
-	// })
-
-	// function random(url) {
-	//   $.getJSON(url, function() {
-	//     console.log(url);
-	//   });
-	// }
-
-	// function handleRamdom(response) {
-	//   var topicsList = response.query.pages;
-	//   // var descList = response[2];
-	//   // var urlList = response[3];
-
-	//   // $('#Topic-list').empty();
-
-	//   // topicsList.forEach(function (topicItem, index) {
-	//   //   var nodo = $(TEMPLATE);
-	//   //   updateTitle(nodo, topicItem);
-	//   //   updateText(nodo, descList[index]);
-	//   //   readMore(nodo, urlList[index]);
-
-	//     // $('#Topic-list').append(nodo);
-	//     Object.keys(response.query);
-	// };
-
-	// function updateRandomTitle(data) {
-	//   var tittle =data.title;
-	//   nodo.find(".Topic-item-text").html(tittle);
-	// }
-
-	// function updateRandomText(nodo, text) {
-	//   var description =data.extract;
-	//   nodo.find(".Topic-item-text").html(description);
-	// }
 
 
 /***/ },

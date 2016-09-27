@@ -1,6 +1,6 @@
 .Topic-items {
-  align-items: center;
   color: #929487;
+  max-width: 100%;
 
   @media screen and (min-width: 810px) {
     width: 800px;
@@ -10,8 +10,8 @@
 .Topic-item {
   background-color: white;
   border-radius: 10px;
-  margin-bottom: 30px;
-  width: 100%;
+  margin-bottom: 5rem;
+  max-width: 100%;
   padding: 30px;
 
   h3 {

@@ -3,11 +3,11 @@
 }
 
 .Icon-lens {
-  position: absolute;
   fill: #929487;
   left: 20px;
+  pointer-events: none;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
 }
 

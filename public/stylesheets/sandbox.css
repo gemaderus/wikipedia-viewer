@@ -5,6 +5,7 @@
 * 2. Prevent iOS text size adjust after orientation change, without disabling
 *    user zoom.
 */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -291,17 +292,15 @@ General fonts and other global styles of the page.
 
 html {
   box-sizing: border-box;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 62.5%;
   line-height: 1.5;
-  position: relative; }
-
-html,
-body {
+  position: relative;
   height: 100%; }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  min-height: 100%; }
 
 /*
 
@@ -339,17 +338,6 @@ Links styles.
 a {
   cursor: pointer;
   text-decoration: none; }
-
-/*
-
-Label
------
-
-Label styles.
-
-*/
-label {
-  cursor: pointer; }
 
 /*
 
@@ -392,27 +380,33 @@ p {
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 0%;
-          flex: 1 0 0%;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 100%;
   padding: 20px; }
 
 .Input-group {
   position: relative; }
+  .Input-group .Input-holder {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+
+input[type="search"] {
+  box-sizing: border-box; }
 
 .Input-Search {
-  padding: 20px 20px 20px 65px;
-  font-size: 20px;
-  border: 0;
   border-radius: 6px 0  0 6px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  border: 0;
+  color: #929487;
+  font-size: 20px;
   outline: none;
-  color: #929487; }
+  padding: 20px 20px 20px 65px;
+  width: 100%; }
 
 .Search {
-  padding: 30px 0px;
-  max-width: 100%; }
+  max-width: 100%;
+  padding: 5rem 0px; }
   .Search h1 {
     font-size: 30px; }
   .Search h2 {
@@ -426,12 +420,12 @@ p {
     .Search {
       width: 800px; } }
 
+form, h2 {
+  margin-bottom: 5rem; }
+
 .Topic-items {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-              -ms-grid-row-align: center;
-          align-items: center;
-  color: #929487; }
+  color: #929487;
+  max-width: 100%; }
   @media screen and (min-width: 810px) {
     .Topic-items {
       width: 800px; } }
@@ -439,8 +433,8 @@ p {
 .Topic-item {
   background-color: white;
   border-radius: 10px;
-  margin-bottom: 30px;
-  width: 100%;
+  margin-bottom: 5rem;
+  max-width: 100%;
   padding: 30px; }
   .Topic-item h3 {
     border-bottom: 1px solid #ddd;
@@ -456,8 +450,8 @@ p {
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
-  border: 0;
   border-radius: 6px;
+  border: 0;
   display: inline-block;
   font-family: inherit;
   font-size: 16px;
@@ -477,20 +471,26 @@ p {
   .Btn-action:hover {
     background-color: #ff2c90; }
 
+.Button-holder {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%; }
+
 .Button--search {
-  border-radius: 0 6px 6px 0; }
+  border-radius: 0 6px 6px 0;
+  width: 100%;
+  height: 100%; }
 
 .Icon {
   display: inline-block; }
 
 .Icon-lens {
-  position: absolute;
   fill: #929487;
   left: 20px;
+  pointer-events: none;
+  position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  pointer-events: none; }
+          transform: translateY(-50%); }
 
 .Body {
   background-image: url(../../images/powerfull.jpg);
